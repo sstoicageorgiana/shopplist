@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shopping List</title>
+    <link href='https://fonts.googleapis.com/css?family=Permanent+Marker:400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="indexCSS.css" />
+    <link rel="stylesheet" type="text/css" href="font/flaticon.css">
+</head>
+
+<body onload="draw();">
+    <form onsubmit="event.preventDefault();">
+        <div class="container">
+            <h1>Shopping list</h1>
+            <input type="text" name="item" placeholder="Type item to remember..."  />
+            <!-- <input class="addBtn"  type="submit" value="Add Item" onclick="adauga();   " /> -->
+            <button id="addBtn" type="submit" onclick="adauga();" > Add  <span class="flaticon-add"></span>  </button>
+            <br />
+            <button id="sortBtn" onclick="sortAsc();" > Sort asc <span class="flaticon-descending-sort"></span>   </button>
+            <button id="sortBtn" onclick="sortDesc();" >Sort desc <span class="flaticon-sort-ascending"></span>   </button>
+
+        </div>
+    </form>
+
+    <table class="list">
+        <thead>
+            <tr class="cell hidden">
+                <th>Item Description</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script src="indexJS.js"></script>
+</body>
+
+
+</html>
